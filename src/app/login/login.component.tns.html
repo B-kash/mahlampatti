@@ -1,4 +1,4 @@
-<FlexboxLayout class="page">
+<FlexboxLayout class="login-page">
   <StackLayout class="form">
     <StackLayout class="input-field">
       <TextField class="input" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
@@ -10,8 +10,11 @@
 
     </StackLayout>
 
-    <Button text="Log In" class="btn btn-primary"></Button>
+  <StackLayout>
+    <Button text="Log In" class="btn btn-primary" (tap)="login()"></Button>
+    <Label text="Don't Have an Account? Sign Up"></Label>
   </StackLayout>
-  <Label text="Don’t have an account?"></Label>
+  </StackLayout>
+
 
 </FlexboxLayout>

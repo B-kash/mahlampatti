@@ -1,16 +1,21 @@
 <div class="login-page">
   <div class="form">
     <form class="register-form" *ngIf="isRegisterPage">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
+      <label class="form-control-label" for="name">Name</label>
+      <input type="text" id="name" placeholder="name"/>
+      <label for="password">Password</label>
+      <input type="password" placeholder="password" id="password"/>
+      <label for="email">Email</label>
+      <input type="text" placeholder="email address" id="email"/>
       <button>create</button>
       <p class="message">Already registered? <a (click)="isRegisterPage=!isRegisterPage">Sign In</a></p>
     </form>
     <form class="login-form" *ngIf="!isRegisterPage">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
+      <label for="userName">UserName</label>
+      <input type="text" placeholder="username" id="userName"/>
+      <label for="password">Password</label>
+      <input type="password" placeholder="password" id="password"/>
+      <button (click)="login()">login</button>
       <p class="message">Not registered? <a (click)="isRegisterPage=!isRegisterPage">Create an account</a></p>
     </form>
   </div>

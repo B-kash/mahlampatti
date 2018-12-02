@@ -1,11 +1,13 @@
 /* Add mobile styles for the component here.  */
-.page {
+.login-page {
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background-size: cover;
+  background-image: url("res://sthetescope");
 }
 .form {
-  margin-left: 30em;
-  margin-right: 30em;
-  flex-grow: 2;
-  vertical-align: middle;
+  width: 300;
+  padding: 10 16;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
