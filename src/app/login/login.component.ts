@@ -26,7 +26,8 @@ export class LoginComponent implements OnInit {
   //  TODO call api here with the above challange
 
   //  after calling the api route it to the home page
-    this.router.navigate(['/home']);
+  //  TODO later add this line of code for routing to homeComponent also add Home component
+  //   this.router.navigate(['/home']);
 
   }
 }
