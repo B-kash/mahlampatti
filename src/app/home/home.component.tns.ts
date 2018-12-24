@@ -1,7 +1,10 @@
 import {RadSideDrawerComponent} from "nativescript-ui-sidedrawer/angular";
 
-import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 import {RadSideDrawer} from "nativescript-ui-sidedrawer";
+import {Router} from "@angular/router";
+import {MenuItems} from "../constants/MenuItems";
+
 
 @Component({
 
@@ -9,10 +12,12 @@ import {RadSideDrawer} from "nativescript-ui-sidedrawer";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-  private _mainContentText: string;
+export class HomeComponent implements OnInit, AfterViewInit {
 
-  constructor(private _changeDetectionRef: ChangeDetectorRef) {
+  menuItems: any = MenuItems.menuItems;
+
+  constructor(private _changeDetectionRef: ChangeDetectorRef,
+              private router: Router) {
   }
 
   @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
@@ -20,7 +25,7 @@ export class HomeComponent implements OnInit {
   private drawer: RadSideDrawer;
 
   ngOnInit() {
-    this.mainContentText = "SideDrawer for NativeScript can be easily setup in the HTML definition of your page by defining tkDrawerContent and tkMainContent. The component has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer.";
+
   }
 
   ngAfterViewInit() {
@@ -28,20 +33,11 @@ export class HomeComponent implements OnInit {
     this._changeDetectionRef.detectChanges();
   }
 
-  get mainContentText() {
-    return this._mainContentText;
+  toggleDrawer() {
+    this.drawer.toggleDrawerState();
   }
 
-  set mainContentText(value: string) {
-    this._mainContentText = value;
+  route(item) {
+    this.router.navigate([item.route]);
   }
-
-  public openDrawer() {
-    this.drawer.showDrawer();
-  }
-
-  public onCloseDrawerTap() {
-    this.drawer.closeDrawer();
-  }
-
 }
