@@ -4,7 +4,7 @@ import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 import {RadSideDrawer} from "nativescript-ui-sidedrawer";
 
 @Component({
-
+  moduleId: module.id,
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']

@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import {NativeScriptUISideDrawerModule} from "nativescript-ui-sidedrawer/angular";
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import {NativeScriptUISideDrawerModule} from "nativescript-ui-sidedrawer/angular
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
