@@ -12,7 +12,7 @@ import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
 import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component.tns';
 import {NativeScriptUISideDrawerModule} from "nativescript-ui-sidedrawer/angular";
 
 @NgModule({
