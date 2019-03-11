@@ -1,0 +1,20 @@
+@import "~src/assets/css/main";
+.landing-page-layout{
+  height:90vh;
+  padding-top:10vh;
+  min-width: 100vw;
+  width:100vw;
+  background-image: url("~src/assets/images/backgroundpattern.png");
+  background-repeat: repeat;
+  background-color: $wall-color;
+  position:relative;
+  .landing-floor{
+    background:linear-gradient($floor-color,#adaeb1);
+    position:absolute;
+    height:20vh;
+    width:100%;
+    bottom:0;
+    z-index:0;
+  }
+}
+

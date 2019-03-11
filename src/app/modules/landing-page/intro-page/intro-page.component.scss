@@ -1,0 +1,83 @@
+@import'~src/assets/css/main';
+
+.intro-page{
+  @extend %flex-basic;
+  position: relative;
+  width:95vw;
+  padding:0 2.5vw;
+  z-index: 2;
+  height:90vh;
+  .text-area, .image-area{
+    @extend %flex-basic;
+    flex-direction: column;
+    width:50%;
+    //height:90%;
+    position:relative;
+  }
+  .text-area{
+     margin-top:8%;
+    padding:0 5vw;
+    .title{
+      font-family:$title-font;
+      font-size:5.5vw;
+      color:white;
+      text-shadow:2px 1px rgba(0,0,0,0.3),3px 2px rgba(0,0,0,0.2),4px 3px rgba(0,0,0,0.12);
+    }
+    .content{
+      padding-right:5%;
+      margin-bottom:1.2vh;
+      color:white;
+    }
+    .buttons{
+      @extend %flex-basic;
+      button{
+        @extend %rounded-button;
+        margin-left: unset;
+      }
+      button:hover{
+        background:#fff;
+        color:$wall-color;
+      }
+    }
+    .vase{
+      height:18vh;
+      position: absolute;
+      z-index:2;
+      left:5%;
+      bottom:18vh;
+      width:auto;
+    }
+  }
+  .image-area{
+    justify-content: flex-end;
+    margin-bottom:10vh;
+    .svg-intro{
+      height: 90%;
+      width: 85%;
+      right:5%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        position: absolute;
+        z-index: 2;
+      }
+      .clock{
+        height:15%;
+        width: auto;
+        left:0;
+        top:20%;
+      }
+      .certificates{
+        right:0;
+        top:20%;
+        height:20%;
+        width: auto;
+      }
+      .receptionist{
+        height:80%;
+        width: auto;
+      }
+    }
+  }
+}

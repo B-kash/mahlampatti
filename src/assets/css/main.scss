@@ -1,0 +1,21 @@
+
+$accent-font: 'Nunito',sans-serif;
+$title-font: 'Oswald',sans-serif;
+$nepali: 'Ananda Chautari';
+$wall-color: #339cee;
+$floor-color: #c9ccd1;
+
+%rounded-button{
+  background:transparent;
+  border-radius:15px;
+  border:solid 2px white;
+  transition: .6s;
+  margin:0 10px;
+  color:white;
+  min-width: 100px;
+  padding:5px 10px;
+  font-size:18px;
+}
+%flex-basic{
+  display:flex;
+}
