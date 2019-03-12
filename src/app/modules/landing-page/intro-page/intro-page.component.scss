@@ -4,28 +4,30 @@
   @extend %flex-basic;
   position: relative;
   width:95vw;
-  padding:0 2.5vw;
+  padding-right:2.5vw;
+  padding-left:2.5vw;
   z-index: 2;
-  height:90vh;
+  padding-top:10vh;
+  height:70vh;
   .text-area, .image-area{
     @extend %flex-basic;
     flex-direction: column;
     width:50%;
-    //height:90%;
+    height:100%;
     position:relative;
   }
   .text-area{
-     margin-top:8%;
+     //margin-top:8%;
+    justify-content:center;
     padding:0 5vw;
     .title{
-      font-family:$title-font;
-      font-size:5.5vw;
+     @extend %title-font;
       color:white;
       text-shadow:2px 1px rgba(0,0,0,0.3),3px 2px rgba(0,0,0,0.2),4px 3px rgba(0,0,0,0.12);
     }
     .content{
       padding-right:5%;
-      margin-bottom:1.2vh;
+      margin:1.2vh 0;
       color:white;
     }
     .buttons{
@@ -40,17 +42,16 @@
       }
     }
     .vase{
-      height:18vh;
+      height:20vh;
       position: absolute;
       z-index:2;
       left:5%;
-      bottom:18vh;
+      bottom:-4%;
       width:auto;
     }
   }
   .image-area{
     justify-content: flex-end;
-    margin-bottom:10vh;
     .svg-intro{
       height: 90%;
       width: 85%;
@@ -66,17 +67,18 @@
         height:15%;
         width: auto;
         left:0;
-        top:20%;
+        top:25%;
       }
       .certificates{
         right:0;
         top:20%;
-        height:20%;
+        height:25%;
         width: auto;
       }
       .receptionist{
-        height:80%;
-        width: auto;
+        width:100%;
+        height:auto;
+        bottom:-6%;
       }
     }
   }

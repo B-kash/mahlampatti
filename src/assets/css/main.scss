@@ -5,6 +5,11 @@ $nepali: 'Ananda Chautari';
 $wall-color: #339cee;
 $floor-color: #c9ccd1;
 
+%title-font{
+  line-height:5.5vw;
+  font-size:5.5vw;
+  font-family: $title-font;
+}
 %rounded-button{
   background:transparent;
   border-radius:15px;
