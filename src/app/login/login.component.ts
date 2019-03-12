@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {ApiService} from "../api.service";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   password:string;
   isRegisterPage:boolean = false;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private api:ApiService) { }
 
   ngOnInit() {
   }
@@ -25,9 +26,13 @@ export class LoginComponent implements OnInit {
     }
   //  TODO call api here with the above challange
 
-  //  after calling the api route it to the home page
-  //  TODO later add this line of code for routing to homeComponent also add Home component
-  //   this.router.navigate(['/home']);
+    this.api.login(challange).subscribe(res=>{
+      console.log(res);
+      this.router.navigate(['/home']);
+
+    },err=>{
+      console.log(err);
+    })
 
   }
 }

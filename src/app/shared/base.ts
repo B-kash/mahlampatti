@@ -1,12 +1,12 @@
 export class Base {
   id: number;
+  addedDate: Date;
+  modifiedDate: Date;
+  deletedDate: Date;
   addedBy: number;
-  addedOn: Date;
   modifiedBy: number;
-  modifiedOn: Date;
+  deleted: boolean;
   deletedBy: number;
-  deletedOn: Date;
-
   constructor() {
   }
 }

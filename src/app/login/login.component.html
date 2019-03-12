@@ -12,9 +12,9 @@
     </form>
     <form class="login-form" *ngIf="!isRegisterPage">
       <label for="userName">UserName</label>
-      <input type="text" placeholder="username" id="userName"/>
+      <input type="text" placeholder="username" name="UserName" [(ngModel)]="userName" id="userName"/>
       <label for="password">Password</label>
-      <input type="password" placeholder="password" id="password"/>
+      <input type="password" placeholder="password" name="Password" id="password" [(ngModel)]="password"/>
       <button (click)="login()">login</button>
       <p class="message">Not registered? <a (click)="isRegisterPage=!isRegisterPage">Create an account</a></p>
     </form>
